@@ -1,6 +1,6 @@
-import ShopHero from "./ShopHero";
-import ShopMain from "./ShopMain";
-import ShopModal from "./ShopModal";
+import ShopHero from "../../components/shop/ShopHero";
+import ShopMain from "../../components/shop/ShopMain";
+import ShopModal from "../../components/shop/ShopModal";
 
 const Shop = () => {
   return (

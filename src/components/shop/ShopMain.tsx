@@ -2,11 +2,13 @@ import { useState, useEffect } from "react";
 import BookService from "../../services/BookService";
 import ShopSidebar from "./ShopSidebar";
 import { Link } from "react-router-dom";
+import { useAuth } from "react-oidc-context";
 
 const ShopMain = () => {
   const [books, setBooks] = useState([]);
   const [currentCategory, setCurrentCategory] = useState("");
   const [search, setSearch] = useState("");
+  const auth = useAuth();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -17,7 +19,8 @@ const ShopMain = () => {
   }, []);
 
   const handleBorrow = async (id) => {
-    const isBorrowed = await BookService.borrow(id);
+    if (!auth.isAuthenticated) return auth.signinRedirect();
+    const isBorrowed = await BookService.borrow(id, auth.user?.profile.sub);
     if (isBorrowed) setBooks((state) => state.filter((book) => book.id !== id));
   };
 
