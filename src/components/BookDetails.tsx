@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import BookService from "../../services/BookService";
+import BookService from "../services/BookService";
+import { useAuth } from "react-oidc-context";
 
 const BookDetails = () => {
   const [book, setBook] = useState([]);
   const { id } = useParams();
+  const auth = useAuth();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -16,7 +18,8 @@ const BookDetails = () => {
 
   const handleBookBorrow = async () => {
     if (book.status === "borrowed") return;
-    const isBorrowed = await BookService.borrow(id);
+    if (!auth.isAuthenticated) return auth.signinRedirect();
+    const isBorrowed = await BookService.borrow(id, auth.user?.profile.sub);
     if (isBorrowed) setBook((state) => ({ ...state, status: "borrowed" }));
   };
 
