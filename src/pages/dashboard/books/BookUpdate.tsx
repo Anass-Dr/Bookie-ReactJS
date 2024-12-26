@@ -3,6 +3,7 @@ import BookService from "../../../services/BookService";
 import CategoryService from "../../../services/CategoryService";
 import { BookInterface } from "../../../interfaces/book.interface";
 import { useNavigate, useParams } from "react-router-dom";
+import { CategoryInterface } from "../../../interfaces/category.interface";
 
 const BookUpdate = () => {
   const { id } = useParams();
@@ -12,12 +13,12 @@ const BookUpdate = () => {
     category: "",
     publicationYear: "",
   });
-  const [categories, setCategories] = useState([]);
+  const [categories, setCategories] = useState<CategoryInterface[]>([]);
   const navigate = useNavigate();
 
   useEffect(() => {
     const getBook = async () => {
-      const book = await BookService.getOne(id);
+      const book = await BookService.getOne(id as string);
       setBook(book);
     };
     const getCategories = async () => {
@@ -28,18 +29,18 @@ const BookUpdate = () => {
     getCategories();
   }, []);
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     setBook({ ...book, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
-    const isUpdated = await BookService.update(id, book);
+    const isUpdated = await BookService.update(id || "", book);
     if (isUpdated) navigate("/dashboard/book-list");
   };
 
   const handleDelete = async () => {
-    const isDeleted = await BookService.delete(id);
+    const isDeleted = await BookService.delete(id || "");
     if (isDeleted) navigate("/dashboard/book-list");
   };
 

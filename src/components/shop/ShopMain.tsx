@@ -3,9 +3,10 @@ import BookService from "../../services/BookService";
 import ShopSidebar from "./ShopSidebar";
 import { Link } from "react-router-dom";
 import { useAuth } from "react-oidc-context";
+import { BookInterface } from "../../interfaces/book.interface";
 
 const ShopMain = () => {
-  const [books, setBooks] = useState([]);
+  const [books, setBooks] = useState<BookInterface[]>([]);
   const [currentCategory, setCurrentCategory] = useState("");
   const [search, setSearch] = useState("");
   const auth = useAuth();
@@ -18,9 +19,9 @@ const ShopMain = () => {
     fetchData();
   }, []);
 
-  const handleBorrow = async (id) => {
+  const handleBorrow = async (id: string) => {
     if (!auth.isAuthenticated) return auth.signinRedirect();
-    const isBorrowed = await BookService.borrow(id, auth.user?.profile.sub);
+    const isBorrowed = await BookService.borrow(id, auth.user?.profile.sub || "");
     if (isBorrowed) setBooks((state) => state.filter((book) => book.id !== id));
   };
 
@@ -73,7 +74,7 @@ const ShopMain = () => {
                 Sort by
                 <form className="woocommerce-ordering" method="get">
                   <select name="orderby" className="orderby selectpickers">
-                    <option value="menu_order" selected="selected">
+                    <option value="menu_order" selected={true}>
                       Default sorting
                     </option>
                     <option value="popularity">Sort by popularity</option>
@@ -112,7 +113,7 @@ const ShopMain = () => {
                         data-img="/assets/img/author_book1.jpg"
                         data-price="25"
                         data-mrp="120"
-                        onClick={() => handleBorrow(book.id)}
+                        onClick={() => handleBorrow(book.id || "")}
                       >
                         <i className="icon_cart_alt"></i>Borrow
                       </button>

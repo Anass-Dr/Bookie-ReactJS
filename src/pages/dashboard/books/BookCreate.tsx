@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import CategoryService from "../../../services/CategoryService";
 import BookService from "../../../services/BookService";
 import { BookInterface } from "../../../interfaces/book.interface";
+import { CategoryInterface } from "../../../interfaces/category.interface";
 
 const BookCreate = () => {
   const [book, setBook] = useState<BookInterface>({
@@ -10,7 +11,7 @@ const BookCreate = () => {
     category: "",
     publicationYear: "",
   });
-  const [categories, setCategories] = useState([]);
+  const [categories, setCategories] = useState<CategoryInterface[]>([]);
 
   useEffect(() => {
     const getCategories = async () => {
@@ -20,11 +21,11 @@ const BookCreate = () => {
     getCategories();
   }, []);
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     setBook({ ...book, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     const isCreated = await BookService.create(book);
     if (isCreated)

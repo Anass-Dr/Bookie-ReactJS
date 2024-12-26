@@ -2,9 +2,14 @@ import { useState, useEffect } from "react";
 import { useAuth } from "react-oidc-context";
 import axiosInstance from "../../config/axios";
 import { toast } from "react-toastify";
+import { UserInterface } from "../../interfaces/user.interface";
 
 const AccountInfo = () => {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState<UserInterface>({
+    firstName: "",
+    lastName: "",
+    email: "",
+  });
   const auth = useAuth();
 
   useEffect(() => {
@@ -19,14 +24,14 @@ const AccountInfo = () => {
           firstName: user.data?.fullName.split(" ")[0],
           lastName: user.data?.fullName.split(" ")[1],
         });
-      } catch (error) {
+      } catch (error: any) {
         toast.error(error?.response?.data?.message);
       }
     };
     getUser();
   }, [auth]);
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
 

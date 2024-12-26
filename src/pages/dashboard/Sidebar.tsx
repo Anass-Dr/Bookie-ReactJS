@@ -4,7 +4,10 @@ import { useAuth } from "react-oidc-context";
 const SideBar = () => {
   const location = useLocation();
   const auth = useAuth();
-  const isAdmin = auth.user?.profile["cognito:groups"].includes("admin");
+  const groups: string[] = Array.isArray(auth?.user?.profile["cognito:groups"])
+    ? auth.user.profile["cognito:groups"]
+    : [];
+  const isAdmin = groups.includes("admin");
 
   return (
     <div className="account_dashboard_sidebar">

@@ -3,7 +3,7 @@ const ShopModal = () => {
     <div
       className="modal fade product-quickview-modal"
       id="productQuickView"
-      tabIndex="-1"
+      tabIndex={-1}
       aria-hidden="true"
     >
       <div className="modal-dialog  modal-dialog-centered">

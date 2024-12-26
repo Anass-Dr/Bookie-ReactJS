@@ -1,8 +1,15 @@
 import { useState, useEffect } from "react";
 import CategoryService from "../../services/CategoryService";
+import { CategoryInterface } from "../../interfaces/category.interface";
 
-const ShopSidebar = ({ currentCategory, setCurrentCategory }) => {
-  const [categories, setCategories] = useState([]);
+const ShopSidebar = ({
+  currentCategory,
+  setCurrentCategory,
+}: {
+  currentCategory: string;
+  setCurrentCategory: (category: string) => void;
+}) => {
+  const [categories, setCategories] = useState<CategoryInterface[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {

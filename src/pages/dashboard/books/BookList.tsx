@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import BookService from "../../../services/BookService";
 import { Link, useNavigate } from "react-router-dom";
+import { BookInterface } from "../../../interfaces/book.interface";
 
 const BookList = () => {
-  const [Books, setBooks] = useState([]);
+  const [Books, setBooks] = useState<BookInterface[]>([]);
   const navigate = useNavigate();
 
   useEffect(() => {

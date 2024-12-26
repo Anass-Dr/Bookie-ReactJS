@@ -2,15 +2,21 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import BookService from "../services/BookService";
 import { useAuth } from "react-oidc-context";
+import { BookInterface } from "../interfaces/book.interface";
 
 const BookDetails = () => {
-  const [book, setBook] = useState([]);
+  const [book, setBook] = useState<BookInterface>({
+    title: "",
+    author: "",
+    category: "",
+    publicationYear: "",
+  });
   const { id } = useParams();
   const auth = useAuth();
 
   useEffect(() => {
     const fetchData = async () => {
-      const book = await BookService.getOne(id);
+      const book = await BookService.getOne(id as string);
       setBook(book);
     };
     fetchData();
@@ -19,7 +25,7 @@ const BookDetails = () => {
   const handleBookBorrow = async () => {
     if (book.status === "borrowed") return;
     if (!auth.isAuthenticated) return auth.signinRedirect();
-    const isBorrowed = await BookService.borrow(id, auth.user?.profile.sub);
+    const isBorrowed = await BookService.borrow(id as string, auth.user?.profile.sub as string);
     if (isBorrowed) setBook((state) => ({ ...state, status: "borrowed" }));
   };
 

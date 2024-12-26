@@ -2,25 +2,27 @@ import { useState, useEffect } from "react";
 import BookService from "../../../services/BookService";
 import { Link } from "react-router-dom";
 import { useAuth } from "react-oidc-context";
+import { BookLoanInterface } from "../../../interfaces/book-loan-interface";
 
 const BookLoans = () => {
-  const [BookLoans, setBookLoans] = useState([]);
+  const [BookLoans, setBookLoans] = useState<BookLoanInterface[]>([]);
   const auth = useAuth();
 
   useEffect(() => {
     const getBookLoans = async () => {
-      const bookLoans = await BookService.getBorrowed(auth?.user?.profile.sub);
+      const bookLoans = await BookService.getBorrowed(auth?.user?.profile.sub || "");
       setBookLoans(bookLoans || []);
     };
     getBookLoans();
   }, [auth]);
 
-  const handleBookReturn = async (id) => {
+  const handleBookReturn = async (id: string) => {
     const isReturned = await BookService.returnBook(
       id,
-      auth?.user?.profile.sub
+      auth?.user?.profile.sub || ""
     );
-    if (isReturned) setBookLoans(BookLoans.filter((bookLoan) => bookLoan.book.id !== id));
+    if (isReturned)
+      setBookLoans(BookLoans.filter((bookLoan) => bookLoan.book.id !== id));
   };
 
   return (
@@ -47,7 +49,7 @@ const BookLoans = () => {
                   <button
                     type="button"
                     className="bj_theme_btn add-to-cart-automated"
-                    onClick={() => handleBookReturn(bookLoan?.book.id)}
+                    onClick={() => handleBookReturn(bookLoan?.book.id || "")}
                   >
                     Return
                   </button>
