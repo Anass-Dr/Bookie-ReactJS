@@ -19,7 +19,7 @@ const BestSelling = () => {
               data-wow-delay="0.2s"
             >
               <a href="product-single.html" className="img">
-                <img src="assets/img/home/new_book_img1.jpg" alt="book" />
+                <img src="assets/img/new_book_img1.jpg" alt="book" />
               </a>
               <div className="bj_new_pr_content_two">
                 <a href="shop-sidebar.html" className="category">
@@ -46,7 +46,7 @@ const BestSelling = () => {
               data-wow-delay="0.3s"
             >
               <a href="product-single.html" className="img">
-                <img src="assets/img/home/new_book_img2.jpg" alt="book" />
+                <img src="assets/img/new_book_img2.jpg" alt="book" />
               </a>
               <div className="bj_new_pr_content_two">
                 <a href="shop-sidebar.html" className="category">
@@ -73,7 +73,7 @@ const BestSelling = () => {
               data-wow-delay="0.4s"
             >
               <a href="product-single.html" className="img">
-                <img src="assets/img/home/new_book_img3.jpg" alt="book" />
+                <img src="assets/img/new_book_img3.jpg" alt="book" />
               </a>
               <div className="bj_new_pr_content_two">
                 <a href="shop-sidebar.html" className="category">
@@ -101,7 +101,7 @@ const BestSelling = () => {
               data-wow-delay="0.5s"
             >
               <a href="product-single.html" className="img">
-                <img src="assets/img/home/new_book_img5.jpg" alt="book" />
+                <img src="assets/img/new_book_img5.jpg" alt="book" />
               </a>
               <div className="bj_new_pr_content_two">
                 <a href="shop-sidebar.html" className="category">
@@ -129,7 +129,7 @@ const BestSelling = () => {
               data-wow-delay="0.6s"
             >
               <a href="product-single.html" className="img">
-                <img src="assets/img/home/new_book_img1.jpg" alt="book" />
+                <img src="assets/img/new_book_img1.jpg" alt="book" />
               </a>
               <div className="bj_new_pr_content_two">
                 <a href="shop-sidebar.html" className="category">
@@ -157,7 +157,7 @@ const BestSelling = () => {
               data-wow-delay="0.7s"
             >
               <a href="product-single.html" className="img">
-                <img src="assets/img/home/new_book_img6.jpg" alt="book" />
+                <img src="assets/img/new_book_img6.jpg" alt="book" />
               </a>
 
               <div className="bj_new_pr_content_two">

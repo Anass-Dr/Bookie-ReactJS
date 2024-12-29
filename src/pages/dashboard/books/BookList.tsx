@@ -30,7 +30,7 @@ const BookList = () => {
               <div className="best_product_item best_product_item_two">
                 <div className="img">
                   <a href="#">
-                    <img src="/assets/img/home-two/choice2.png" alt="book" />
+                    <img src="/assets/img/choice2.png" alt="book" />
                   </a>
                   <button
                     type="button"

@@ -140,7 +140,7 @@ const FeatureAuthors = () => {
               >
                 <div className="tab_slider_content">
                   <div className="bj_author_single d-flex align-items-center">
-                    <img src="assets/img/home/author.jpg" alt="" />
+                    <img src="assets/img/author.jpg" alt="" />
                     <div className="bj_author_single_content">
                       <h2>Gustavo Carder</h2>
                       <p>
@@ -211,7 +211,7 @@ const FeatureAuthors = () => {
               >
                 <div className="tab_slider_content">
                   <div className="bj_author_single d-flex align-items-center">
-                    <img src="assets/img/home/author-9.jpg" alt="" />
+                    <img src="assets/img/author-9.jpg" alt="" />
                     <div className="bj_author_single_content">
                       <h2>Gustavo Carder</h2>
                       <p>
@@ -282,7 +282,7 @@ const FeatureAuthors = () => {
               >
                 <div className="tab_slider_content">
                   <div className="bj_author_single d-flex align-items-center">
-                    <img src="assets/img/home/author-2.jpg" alt="" />
+                    <img src="assets/img/author-2.jpg" alt="" />
                     <div className="bj_author_single_content">
                       <h2>Gustavo Carder</h2>
                       <p>
@@ -352,7 +352,7 @@ const FeatureAuthors = () => {
               >
                 <div className="tab_slider_content">
                   <div className="bj_author_single d-flex align-items-center">
-                    <img src="assets/img/home/author-3.jpg" alt="" />
+                    <img src="assets/img/author-3.jpg" alt="" />
                     <div className="bj_author_single_content">
                       <h2>Gustavo Carder</h2>
                       <p>
@@ -422,7 +422,7 @@ const FeatureAuthors = () => {
               >
                 <div className="tab_slider_content">
                   <div className="bj_author_single d-flex align-items-center">
-                    <img src="assets/img/home/author-4.jpg" alt="" />
+                    <img src="assets/img/author-4.jpg" alt="" />
                     <div className="bj_author_single_content">
                       <h2>Gustavo Carder</h2>
                       <p>
@@ -492,7 +492,7 @@ const FeatureAuthors = () => {
               >
                 <div className="tab_slider_content">
                   <div className="bj_author_single d-flex align-items-center">
-                    <img src="assets/img/home/author-5.jpg" alt="" />
+                    <img src="assets/img/author-5.jpg" alt="" />
                     <div className="bj_author_single_content">
                       <h2>Gustavo Carder</h2>
                       <p>
@@ -562,7 +562,7 @@ const FeatureAuthors = () => {
               >
                 <div className="tab_slider_content">
                   <div className="bj_author_single d-flex align-items-center">
-                    <img src="assets/img/home/author-6.jpg" alt="" />
+                    <img src="assets/img/author-6.jpg" alt="" />
                     <div className="bj_author_single_content">
                       <h2>Gustavo Carder</h2>
                       <p>
@@ -632,7 +632,7 @@ const FeatureAuthors = () => {
               >
                 <div className="tab_slider_content">
                   <div className="bj_author_single d-flex align-items-center">
-                    <img src="assets/img/home/author-7.jpg" alt="" />
+                    <img src="assets/img/author-7.jpg" alt="" />
                     <div className="bj_author_single_content">
                       <h2>Gustavo Carder</h2>
                       <p>
@@ -702,7 +702,7 @@ const FeatureAuthors = () => {
               >
                 <div className="tab_slider_content">
                   <div className="bj_author_single d-flex align-items-center">
-                    <img src="assets/img/home/author-8.jpg" alt="" />
+                    <img src="assets/img/author-8.jpg" alt="" />
                     <div className="bj_author_single_content">
                       <h2>Gustavo Carder</h2>
                       <p>

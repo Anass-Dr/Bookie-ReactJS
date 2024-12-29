@@ -15,7 +15,7 @@ const NewProducts = () => {
             <div className="bj_new_pr_item wow fadeInUp" data-wow-delay="0.2s">
               <div className="ribon">30% off</div>
               <a href="product-single.html" className="img">
-                <img src="assets/img/home/book5.jpg" alt="book" />
+                <img src="assets/img/book5.jpg" alt="book" />
               </a>
               <div className="bj_new_pr_content">
                 <a href="product-single.html">
@@ -40,7 +40,7 @@ const NewProducts = () => {
             <div className="bj_new_pr_item wow fadeInUp" data-wow-delay="0.3s">
               <div className="ribon">30% off</div>
               <a href="product-single.html" className="img">
-                <img src="assets/img/home/book6.jpg" alt="book" />
+                <img src="assets/img/book6.jpg" alt="book" />
               </a>
               <div className="bj_new_pr_content">
                 <a href="product-single.html">
@@ -65,7 +65,7 @@ const NewProducts = () => {
             <div className="bj_new_pr_item wow fadeInUp" data-wow-delay="0.4s">
               <div className="ribon">30% off</div>
               <a href="product-single.html" className="img">
-                <img src="assets/img/home/book7.jpg" alt="book" />
+                <img src="assets/img/book7.jpg" alt="book" />
               </a>
               <div className="bj_new_pr_content">
                 <a href="product-single.html">
@@ -89,7 +89,7 @@ const NewProducts = () => {
             <div className="bj_new_pr_item wow fadeInUp" data-wow-delay="0.5s">
               <div className="ribon">30% off</div>
               <a href="product-single.html" className="img">
-                <img src="assets/img/home/book8.jpg" alt="book" />
+                <img src="assets/img/book8.jpg" alt="book" />
               </a>
               <div className="bj_new_pr_content">
                 <a href="product-single.html">

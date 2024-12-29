@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="col-lg-3 col-sm-6">
               <div className="f_widget link_widget pe-4">
                 <a href="#" className="f_logo">
-                  <img src="assets/img/home/logo-white.svg" alt="f_logo" />
+                  <img src="assets/img/logo-white.svg" alt="f_logo" />
                 </a>
                 <div className="footer_subscribes">
                   <h2 className="f_widget_title">Subscribe Now</h2>

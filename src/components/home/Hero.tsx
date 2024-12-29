@@ -38,16 +38,16 @@ const Hero = () => {
                   <h5>Our Community</h5>
                   <div className="people_img">
                     <div className="avater_img">
-                      <img src="assets/img/home/avater_one.png" alt="" />
+                      <img src="assets/img/avater_one.png" alt="" />
                     </div>
                     <div className="avater_img">
-                      <img src="assets/img/home/avater2.png" alt="" />
+                      <img src="assets/img/avater2.png" alt="" />
                     </div>
                     <div className="avater_img">
-                      <img src="assets/img/home/avater3.png" alt="" />
+                      <img src="assets/img/avater3.png" alt="" />
                     </div>
                     <div className="avater_img">
-                      <img src="assets/img/home/avater4.png" alt="" />
+                      <img src="assets/img/avater4.png" alt="" />
                     </div>
                     <div className="avater_img">
                       <i className="fa-solid fa-plus"></i>
@@ -68,14 +68,14 @@ const Hero = () => {
               <img
                 className="wow fadeInRight"
                 data-wow-delay="0.4s"
-                src="assets/img/home/girl.png"
+                src="assets/img/girl.png"
                 alt=""
               />
               <div className="shape_one">
                 <img
                   className="layer"
                   data-depth="-0.15"
-                  src="assets/img/home/star-one.png"
+                  src="assets/img/star-one.png"
                   alt=""
                 />
               </div>
@@ -83,7 +83,7 @@ const Hero = () => {
                 <img
                   className="layer"
                   data-depth="-0.25"
-                  src="assets/img/home/star-two.png"
+                  src="assets/img/star-two.png"
                   alt=""
                 />
               </div>
@@ -91,12 +91,12 @@ const Hero = () => {
                 <img
                   className="layer"
                   data-depth="-0.15"
-                  src="assets/img/home/round.png"
+                  src="assets/img/round.png"
                   alt=""
                 />
               </div>
               <div className="shape_four">
-                <img src="assets/img/home/dot.png" alt="" />
+                <img src="assets/img/dot.png" alt="" />
               </div>
             </div>
           </div>
