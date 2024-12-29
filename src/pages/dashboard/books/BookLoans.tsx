@@ -10,7 +10,9 @@ const BookLoans = () => {
 
   useEffect(() => {
     const getBookLoans = async () => {
-      const bookLoans = await BookService.getBorrowed(auth?.user?.profile.sub || "");
+      const bookLoans = await BookService.getBorrowed(
+        auth?.user?.profile.sub || ""
+      );
       setBookLoans(bookLoans || []);
     };
     getBookLoans();
@@ -44,7 +46,7 @@ const BookLoans = () => {
               <div className="best_product_item best_product_item_two">
                 <div className="img">
                   <a href="#">
-                    <img src="/assets/img/home-two/choice2.png" alt="book" />
+                    <img src="/assets/img/choice2.png" alt="book" />
                   </a>
                   <button
                     type="button"
@@ -55,12 +57,14 @@ const BookLoans = () => {
                   </button>
                 </div>
                 <div className="bj_new_pr_content">
-                  <a href="product-single.html">
+                  <Link to={`/shop/${bookLoan?.book.id}`}>
                     <h6 className="book_title">{bookLoan?.book.title}</h6>
-                  </a>
+                  </Link>
                   <div className="writer_name">
                     By -{" "}
-                    <a href="author-single.html">{bookLoan?.book.author}</a>{" "}
+                    <Link to={`/shop/${bookLoan?.book.id}`}>
+                      {bookLoan?.book.author}
+                    </Link>
                   </div>
                 </div>
               </div>
