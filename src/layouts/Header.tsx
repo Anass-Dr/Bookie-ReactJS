@@ -5,6 +5,7 @@ const Header = () => {
   const auth = useAuth();
 
   const signOutRedirect = async () => {
+    localStorage.removeItem("biblio-ticket");
     await auth.removeUser();
     const clientId = import.meta.env.VITE_CLIENT_ID;
     const logoutUri = import.meta.env.VITE_REDIRECT_URI;
@@ -19,7 +20,7 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg menu_one" id="header">
         <div className="container">
           <Link className="navbar-brand" to="/">
-            <img src="assets/img/home-two/logo-dark.svg" alt="logo" />
+            <img src="assets/img/logo-dark.svg" alt="logo" />
           </Link>
           <button
             className="navbar-toggler collapsed"
