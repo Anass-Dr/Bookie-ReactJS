@@ -5,6 +5,13 @@ pipeline {
         nodejs 'NodeJS 22'
     }
     stages {
+        stage('Setup Environment') {
+            steps {
+                withCredentials([file(credentialsId: 'bookio-front-env', variable: 'ENV_FILE')]) {
+                    sh 'cp $ENV_FILE .env'
+                }
+            }
+        }
         stage('build') {
             steps {
                 sh 'npm install'
@@ -19,6 +26,12 @@ pipeline {
                     }
                 }
             }
+        }
+    }
+
+    post {
+        always {
+            sh 'rm -f .env'
         }
     }
 }
